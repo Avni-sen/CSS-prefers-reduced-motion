@@ -1,0 +1,61 @@
+body {
+  padding: 100px;
+}
+
+button {
+  border: none;
+  background-color: aqua;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.btn-1 {
+  animation: animateColor 1s infinite alternate-reverse;
+}
+
+.btn-2 {
+  animation: pulseButton 1s infinite alternate-reverse;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: black;
+  color: white;
+  transition: 300ms all;
+}
+
+.box:hover {
+  transform: rotate(30deg);
+}
+
+@keyframes animateColor {
+  from {
+    background: aqua;
+  }
+  to {
+    background: lime;
+    color: red;
+  }
+}
+
+@keyframes pulseButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
